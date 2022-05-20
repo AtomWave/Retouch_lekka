@@ -1,29 +1,15 @@
-//====================================================================================================
-.header {
-   // .header__inner
-   &__inner {
-      display: flex;
-      justify-content: space-between;
-   }
-}
-.container {
-}
-.logo {
-   // .logo__img
-   &__img {}
-}
-.menu {
-   // .menu__list
-   &__list {}
-   // .menu__item
-   &__item {}
-   // .menu__link
-   &__link {
-      color: #000;
-   }
-}
+@charset "UTF-8";
+.header__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
 
-//====================================================================================================
+.menu__link {
+  color: #000; }
+
 /*
 	Стиль иконки бургера
 	.icon-menu{
