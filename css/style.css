@@ -342,12 +342,17 @@ ul {
 li {
   padding-left: 0; }
 
+a {
+  color: inherit; }
+
 .menu {
   margin-right: 70px; }
   .menu__list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
+  .menu__link {
+    text-transform: uppercase; }
 
 /*
 	Стиль иконки бургера

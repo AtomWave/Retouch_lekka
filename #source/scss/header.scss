@@ -13,8 +13,10 @@ ul {
 li {
    padding-left: 0;
 }
-.container {
+a{
+   color: inherit;
 }
+
 .logo {
    // .logo__img
    &__img {}
@@ -29,7 +31,7 @@ li {
    &__item {}
    // .menu__link
    &__link {
-      
+       text-transform: uppercase;
    }
 }
 
