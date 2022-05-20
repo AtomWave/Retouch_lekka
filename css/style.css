@@ -325,6 +325,30 @@ body.ie .ibg img {
 .baloon-close {
   top: 18px !important; }
 
+.header__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+ul {
+  margin: 0; }
+
+li {
+  padding-left: 0; }
+
+.menu {
+  margin-right: 70px; }
+  .menu__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+
 /*
 	Стиль иконки бургера
 	.icon-menu{

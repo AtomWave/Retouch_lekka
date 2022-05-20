@@ -4,7 +4,14 @@
    &__inner {
       display: flex;
       justify-content: space-between;
+      align-items: center;
    }
+}
+ul {
+   margin: 0;
+}
+li {
+   padding-left: 0;
 }
 .container {
 }
@@ -13,13 +20,16 @@
    &__img {}
 }
 .menu {
+   margin-right: 70px;
    // .menu__list
-   &__list {}
+   &__list {
+      display: flex;
+   }
    // .menu__item
    &__item {}
    // .menu__link
    &__link {
-      color: #000;
+      
    }
 }
 
