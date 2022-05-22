@@ -30,8 +30,11 @@ $md4: 479.98;
 //<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
 @import "null.scss";
 body {
-   color: #000;
+   color: #131313;
    font-size: 14px;
+   font-weight: 400;
+   font-family: 'Inter', sans-serif;
+   line-height: 17px;
    &.lock {
       overflow: hidden;
    }
