@@ -1,7 +1,3 @@
-//@prepros-append jq-start.js
-//@prepros-append vendors.js
-//@prepros-append custom.js
-//@prepros-append jq-end.js
 $(document).ready(function() {
 		var w=$(window).outerWidth();
 		var h=$(window).outerHeight();
@@ -19,6 +15,3 @@ $(document).ready(function() {
 	if(isMobile.any()){
 		$('body').addClass('touch');
 	}
-
-
-});
