@@ -15,3 +15,5 @@ $(document).ready(function() {
 	if(isMobile.any()){
 		$('body').addClass('touch');
 	}
+
+   
