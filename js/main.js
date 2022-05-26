@@ -2,7 +2,7 @@
 //@prepros-append vendors.js
 //@prepros-append custom.js
 //@prepros-append jq-end.js
-$(document).ready(function() {
+$(function() {
 		var w=$(window).outerWidth();
 		var h=$(window).outerHeight();
 		var ua = window.navigator.userAgent;
@@ -21,8 +21,14 @@ $(document).ready(function() {
 	}
 
    
-$(function(){
 
-}); 
+   $('.bike-slider').slick({
+      arrows: false,
+      dots: true,
+      fade: true,
+      autoplay: true,
+      autoplaySpeed: 2000,
+   });
+
 
 });

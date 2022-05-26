@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function() {
 		var w=$(window).outerWidth();
 		var h=$(window).outerHeight();
 		var ua = window.navigator.userAgent;
