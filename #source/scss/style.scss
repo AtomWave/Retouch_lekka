@@ -126,16 +126,17 @@ body {
       min-height: 53px;
       text-align: center;
         span {
-        display: flex;
+      //display: block;
         text-transform: lowercase;
         font-weight: 400;
         font-size: 12px;
         line-height: 15px;
-      //  видео 2:07:37
+         // 2:07:8
+        display: flex;
         margin-top: 5px;
         min-height: 31px;
-        align-items: center;
         justify-content: center;
+        align-items: center;
      }
    }
 }
@@ -144,16 +145,21 @@ body {
    margin-left: 30px;
    // Обязательно для слайдера указать max-width, чтобы js не перебил flex-basis
    max-width: 630px;
+   // 2:07:8
+   display: flex;
+   flex-direction: column;
 }
 .bike-slider {
    margin-bottom: 25px;
+   
    .slick-dots {
      right: 0;
      top: 52px;
- 
    }
    // .bike-slider__item
    &__item {}
+    // 2:07:8
+    flex: 1 1 auto;
 }
 .slick-dots{
    position: absolute;
@@ -177,6 +183,90 @@ body {
 .slick-active button {
    background: #FF4040;
 }
+//========================================================================================================================================================
+.info {
+   margin-bottom: 150px;
+   // .info__inner
+   &__inner {
+      display: flex;
+   }
+   // .info__img
+   &__img {
+      margin-right: 60px;
+      flex-basis: 570px;
+      object-fit: cover;
+   }
+   // .info__list
+   &__list {
+      flex-basis: 490px;
+   }
+   // .info__item
+   &__item {}
+   &__item + .info__item {
+      padding-top: 50px;
+   }
+
+   // .info__item-title
+   &__item-title {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 19px;
+      text-transform: uppercase;
+      margin: 0 0 10px;
+   }
+   // .info__item-text
+   &__item-text {
+      max-width: 450px;
+   }
+}
+//========================================================================================================================================================
+.characteristics {
+   margin-bottom: 150px;
+   // .characteristics__title
+   &__title {
+      margin: 0 0 40px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 19px;
+      text-transform: uppercase;
+   }
+   // .characteristics__inner
+   &__inner {
+      display: flex;
+      .characteristics__title {
+         padding: 2px 0px 3px 1px;
+         margin: 0 0 13px;
+         font-style: normal;
+         font-weight: 700;
+         font-size: 14px;
+         line-height: 17px;
+         text-transform: uppercase;
+         background: #131313;
+         color: #fff;
+      } 
+   }
+   // .characteristics__items
+   &__items {
+      flex-basis: 570px;
+      margin-right: 60px;
+   }
+   // .characteristics__list
+   &__list + .characteristics__list {
+      padding-top: 32px;
+   }
+   // .characteristics__line
+   &__line {}
+   // .characteristics__name
+   &__name {}
+   // .characteristics__descr
+   &__descr {}
+   // .characteristics__img
+   &__img {
+      align-self: center;
+   }
+}
+
+
 
 //============================================================================================================================
 
