@@ -255,14 +255,35 @@ body {
       padding-top: 32px;
    }
    // .characteristics__line
-   &__line {}
+   &__line {
+      display: flex;
+      padding-top: 5px;
+   }
    // .characteristics__name
-   &__name {}
+   &__name {
+      flex-basis: 285px;
+      padding-right: 25px;
+   }
    // .characteristics__descr
-   &__descr {}
+   &__descr {
+      flex-basis: 285px;
+   }
    // .characteristics__img
    &__img {
       align-self: center;
+   }
+}
+
+//========================================================================================================================================================
+.slider {
+   margin-bottom: 50px;
+   // .slider__items
+   &__items {
+      padding-left: 50px;
+      .slick-dots {
+         top: 0;
+         left: 0;
+      } 
    }
 }
 
