@@ -13,7 +13,8 @@
 //</Иконочные шрифты>==========================================================================================
 
 //<Шрифт по умолчанию>==========================================================================================
-$fontfamily: "Roboto", serif;
+$fontfamily: "Roboto",
+serif;
 //</Шрифт по умолчанию>==========================================================================================
 
 //</ШРИФТЫ>=======================================================================================================
@@ -21,7 +22,7 @@ $fontfamily: "Roboto", serif;
 //<ПЕРЕМЕННЫЕ>===========================================================================================================
 $minwidth: 320px;
 $mw: 1200;
-$md1: $mw + 20;
+$md1: $mw+20;
 $md2: 991.98;
 $md3: 767.98;
 $md4: 479.98;
@@ -29,16 +30,19 @@ $md4: 479.98;
 
 //<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
 @import "null.scss";
+
 body {
    color: #131313;
    font-size: 14px;
    font-weight: 400;
    font-family: 'Inter', sans-serif;
    line-height: 17px;
+
    &.lock {
       overflow: hidden;
    }
 }
+
 //</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
 
 //<ОБОЛОЧКА>===========================================================================================================
@@ -46,9 +50,10 @@ body {
    width: 100%;
    min-height: 100%;
    overflow: hidden;
-   &.loaded {
-   }
+
+   &.loaded {}
 }
+
 //</ОБОЛОЧКА>===========================================================================================================
 
 //<ОСНОВНАЯ СЕТКА>===========================================================================================================
@@ -56,28 +61,35 @@ body {
    max-width: $mw + px;
    margin: 0 auto;
    width: 100%;
+
    @media (max-width: $md1+px) {
       max-width: 970px;
    }
+
    @media (max-width: $md2+px) {
       max-width: 750px;
    }
+
    @media (max-width: $md3+px) {
       max-width: none;
       padding: 0 10px;
    }
 }
+
 //</ОСНОВНАЯ СЕТКА>===========================================================================================================
 
 .bike {
    padding: 100px 0 150px;
+
    // .bike__inner
    &__inner {
       display: flex;
       justify-content: space-between;
    }
+
    // .bike__column
    &__column {}
+
    // .bike__title
    &__title {
       font-size: 64px;
@@ -85,6 +97,7 @@ body {
       line-height: 77px;
       margin: 60px 0 5px;
    }
+
    // .bike__subtitle
    &__subtitle {
       margin: 0 0 60px;
@@ -93,11 +106,13 @@ body {
       line-height: 39px;
       font-weight: 400;
    }
+
    // .bike__text
    &__text {
       margin-bottom: 20px;
       max-width: 420px;
    }
+
    // .bike__link
    &__link {
       margin-top: 80px;
@@ -112,12 +127,14 @@ body {
       line-height: 24px;
       letter-spacing: 1.1em;
    }
+
    // .bike__list
    &__list {
       display: flex;
       justify-content: space-around;
       // margin-top: 25px;
    }
+
    // .bike__list-item
    &__list-item {
       font-weight: 700;
@@ -125,21 +142,23 @@ body {
       min-width: 160px;
       min-height: 53px;
       text-align: center;
-        span {
-      //display: block;
-        text-transform: lowercase;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 15px;
+
+      span {
+         //display: block;
+         text-transform: lowercase;
+         font-weight: 400;
+         font-size: 12px;
+         line-height: 15px;
          // 2:07:8
-        display: flex;
-        margin-top: 5px;
-        min-height: 31px;
-        justify-content: center;
-        align-items: center;
-     }
+         display: flex;
+         margin-top: 5px;
+         min-height: 31px;
+         justify-content: center;
+         align-items: center;
+      }
    }
 }
+
 .bike__column-slider {
    flex-basis: 630px;
    margin-left: 30px;
@@ -149,24 +168,30 @@ body {
    display: flex;
    flex-direction: column;
 }
+
 .bike-slider {
    margin-bottom: 25px;
-   
+
    .slick-dots {
-     right: 0;
-     top: 52px;
+      right: 0;
+      top: 52px;
    }
+
    // .bike-slider__item
    &__item {}
-    // 2:07:8
-    flex: 1 1 auto;
+
+   // 2:07:8
+   flex: 1 1 auto;
 }
-.slick-dots{
+
+.slick-dots {
    position: absolute;
-   li + li {
+
+   li+li {
       padding-top: 10px;
    }
-   button{
+
+   button {
       font-size: 0;
       padding: 0;
       border: 0;
@@ -177,32 +202,39 @@ body {
       cursor: pointer;
       transition: all .3s;
    }
-   
+
 }
+
 .slick-dots button:hover,
 .slick-active button {
    background: #FF4040;
 }
+
 //========================================================================================================================================================
 .info {
    margin-bottom: 150px;
+
    // .info__inner
    &__inner {
       display: flex;
    }
+
    // .info__img
    &__img {
       margin-right: 60px;
       flex-basis: 570px;
       object-fit: cover;
    }
+
    // .info__list
    &__list {
       flex-basis: 490px;
    }
+
    // .info__item
    &__item {}
-   &__item + .info__item {
+
+   &__item+.info__item {
       padding-top: 50px;
    }
 
@@ -214,14 +246,17 @@ body {
       text-transform: uppercase;
       margin: 0 0 10px;
    }
+
    // .info__item-text
    &__item-text {
       max-width: 450px;
    }
 }
+
 //========================================================================================================================================================
 .characteristics {
    margin-bottom: 150px;
+
    // .characteristics__title
    &__title {
       margin: 0 0 40px;
@@ -230,9 +265,11 @@ body {
       line-height: 19px;
       text-transform: uppercase;
    }
+
    // .characteristics__inner
    &__inner {
       display: flex;
+
       .characteristics__title {
          padding: 2px 0px 3px 1px;
          margin: 0 0 13px;
@@ -243,31 +280,37 @@ body {
          text-transform: uppercase;
          background: #131313;
          color: #fff;
-      } 
+      }
    }
+
    // .characteristics__items
    &__items {
       flex-basis: 570px;
       margin-right: 60px;
    }
+
    // .characteristics__list
-   &__list + .characteristics__list {
+   &__list+.characteristics__list {
       padding-top: 32px;
    }
+
    // .characteristics__line
    &__line {
       display: flex;
       padding-top: 5px;
    }
+
    // .characteristics__name
    &__name {
       flex-basis: 285px;
       padding-right: 25px;
    }
+
    // .characteristics__descr
    &__descr {
       flex-basis: 285px;
    }
+
    // .characteristics__img
    &__img {
       align-self: center;
@@ -277,14 +320,126 @@ body {
 //========================================================================================================================================================
 .slider {
    margin-bottom: 50px;
+
    // .slider__items
    &__items {
       padding-left: 50px;
+
       .slick-dots {
          top: 0;
          left: 0;
-      } 
+      }
    }
+}
+
+//========================================================================================================================================================
+.price {
+   margin-bottom: 100px;
+
+   // .price__inner
+   &__inner {}
+}
+
+.form {
+   max-width: 420px;
+
+   // .form__title
+   &__title {
+      margin-bottom: 40px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 19px;
+      text-transform: uppercase;
+   }
+
+   // .form__text
+   &__text {
+      max-width: 300px;
+      margin-bottom: 30px;
+   }
+
+   // .form__input-text
+   &__input-text {
+      color: #6F6F6F;
+      opacity: 0.5;
+      margin-bottom: 10px;
+   }
+
+   // .form__input-name, .form__input-phone
+   &__input-name,
+   &__input-phone {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid #131313;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+
+      ::placeholder {
+         color: #6F6F6F;
+         opacity: 0.5;
+      }
+   }
+
+   // .form__label-box
+   &__label-box {
+      display: flex;
+      margin-bottom: 50px;
+   }
+
+   // .form__label + .form__label
+   &__label+&__label {
+      margin-left: 23px;
+   }
+
+   // .form__input-radio
+   &__input-radio {
+      // прячем радио-кнопки
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      // чтобы не вылезало за пределы 1х1
+      overflow: hidden;
+      // область взаимодействия 0
+      clip: rect(0 0 0 0);
+   }
+
+   // .form__bike
+   &__bike {
+      display: none;
+   }
+
+   // .form__bike-img
+   &__bike-img {}
+
+   // .form__bike-price
+   &__bike-price {}
+
+   // .form__radio-style
+   &__radio-style {
+      width: 80px;
+      height: 12px;
+      border-radius: 30px;
+      cursor: pointer;
+   }
+
+   // .form__radio-style--gray
+   &__radio-style--gray {
+      background: #6F6F6F;
+   }
+
+   // .form__radio-style--white
+   &__radio-style--white {
+      background: #FFFFFF;
+      border: 1px solid #6F6F6F;
+   }
+
+   // .form__radio-style--red
+   &__radio-style--red {
+      background: #FF4040;
+   }
+
+   // .form__btn
+   &__btn {}
 }
 
 
