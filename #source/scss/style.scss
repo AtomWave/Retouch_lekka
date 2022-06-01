@@ -13,8 +13,7 @@
 //</Иконочные шрифты>==========================================================================================
 
 //<Шрифт по умолчанию>==========================================================================================
-$fontfamily: "Roboto",
-serif;
+$fontfamily: "Inter";
 //</Шрифт по умолчанию>==========================================================================================
 
 //</ШРИФТЫ>=======================================================================================================
@@ -35,7 +34,7 @@ body {
    color: #131313;
    font-size: 14px;
    font-weight: 400;
-   font-family: 'Inter', sans-serif;
+   font-family: 'Inter';
    line-height: 17px;
 
    &.lock {
@@ -76,6 +75,25 @@ body {
    }
 }
 
+//========================================================================================================================================================
+
+.btn {
+   background: #131313;
+   // border: none;
+   font-size: 20px;
+   line-height: 24px;
+   letter-spacing: 1.1em;
+   text-transform: uppercase;
+   padding: 28px 60px 28px 81px;
+   cursor: pointer;
+   color: #FFFFFF;
+
+   &:hover {
+      background: #FF4040;
+   }
+}
+
+
 //</ОСНОВНАЯ СЕТКА>===========================================================================================================
 
 .bike {
@@ -95,7 +113,7 @@ body {
       font-size: 64px;
       font-weight: 700;
       line-height: 77px;
-      margin: 60px 0 5px;
+      margin: 72px 0 5px;
    }
 
    // .bike__subtitle
@@ -109,23 +127,30 @@ body {
 
    // .bike__text
    &__text {
-      margin-bottom: 20px;
       max-width: 420px;
+   }
+
+   &__text+&__text {
+      margin-top: 20px;
    }
 
    // .bike__link
    &__link {
       margin-top: 80px;
       display: inline-block;
-      background-color: #131313;
-      color: #fff;
-      padding: 28px 81px;
-      text-transform: uppercase;
-      font-family: Inter;
-      font-size: 20px;
-      font-weight: 400;
-      line-height: 24px;
-      letter-spacing: 1.1em;
+      // background-color: #131313;
+      // color: #fff;
+      // padding: 28px 60px 28px 81px;
+      // text-transform: uppercase;
+      // font-family: Inter;
+      // font-size: 20px;
+      // font-weight: 400;
+      // line-height: 24px;
+      // letter-spacing: 1.1em;
+
+      &:hover {
+         // background: #FF4040;
+      }
    }
 
    // .bike__list
@@ -212,7 +237,7 @@ body {
 
 //========================================================================================================================================================
 .info {
-   margin-bottom: 150px;
+   margin-bottom: 180px;
 
    // .info__inner
    &__inner {
@@ -255,7 +280,7 @@ body {
 
 //========================================================================================================================================================
 .characteristics {
-   margin-bottom: 150px;
+   margin-bottom: 115px;
 
    // .characteristics__title
    &__title {
@@ -337,7 +362,9 @@ body {
    margin-bottom: 100px;
 
    // .price__inner
-   &__inner {}
+   &__inner {
+      position: relative;
+   }
 }
 
 .form {
@@ -399,20 +426,55 @@ body {
       height: 1px;
       // чтобы не вылезало за пределы 1х1
       overflow: hidden;
-      // область взаимодействия 0
+      // область взаимодействия 0px
       clip: rect(0 0 0 0);
+
+      // делаем выдимым слайд при выборе цвета
+      &:checked {
+         +.form__bike {
+            display: block;
+         }
+      }
    }
 
    // .form__bike
    &__bike {
       display: none;
+      position: absolute;
+      right: 0;
+      top: 0;
    }
 
    // .form__bike-img
    &__bike-img {}
 
    // .form__bike-price
-   &__bike-price {}
+   &__bike-price {
+      font-size: 32px;
+      position: absolute;
+      top: 28px;
+      left: 0;
+      right: 0;
+      width: 221px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #FF4040;
+      border-radius: 50%;
+      transform: translateX(-50%);
+
+      &::after {
+         content: '';
+         width: 221px;
+         height: 100px;
+         border: 1px solid #FF4040;
+         border-radius: 50%;
+         position: absolute;
+         top: 12px;
+         left: 0;
+      }
+   }
 
    // .form__radio-style
    &__radio-style {
@@ -439,7 +501,21 @@ body {
    }
 
    // .form__btn
-   &__btn {}
+   &__btn {
+      // background: #131313;
+      // border: none;
+      // font-size: 20px;
+      // line-height: 24px;
+      // letter-spacing: 1.1em;
+      // text-transform: uppercase;
+      // padding: 28px 65px 28px 81px;
+      // cursor: pointer;
+      // color: #FFFFFF;
+
+      // &:hover {
+      //    background: #FF4040;
+      // }
+   }
 }
 
 
