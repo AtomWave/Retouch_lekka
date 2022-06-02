@@ -79,7 +79,7 @@ body {
 
 .btn {
    background: #131313;
-   // border: none;
+   border: none;
    font-size: 20px;
    line-height: 24px;
    letter-spacing: 1.1em;
@@ -87,6 +87,7 @@ body {
    padding: 28px 60px 28px 81px;
    cursor: pointer;
    color: #FFFFFF;
+   transition: all .3s;
 
    &:hover {
       background: #FF4040;
@@ -97,7 +98,7 @@ body {
 //</ОСНОВНАЯ СЕТКА>===========================================================================================================
 
 .bike {
-   padding: 100px 0 150px;
+   padding: 100px 0 100px;
 
    // .bike__inner
    &__inner {
@@ -237,7 +238,8 @@ body {
 
 //========================================================================================================================================================
 .info {
-   margin-bottom: 180px;
+   padding-top: 50px;
+   margin-bottom: 130px;
 
    // .info__inner
    &__inner {
@@ -280,6 +282,7 @@ body {
 
 //========================================================================================================================================================
 .characteristics {
+   padding-top: 50px;
    margin-bottom: 115px;
 
    // .characteristics__title
