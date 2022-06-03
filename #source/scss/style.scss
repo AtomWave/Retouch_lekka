@@ -112,7 +112,7 @@ body {
       display: flex;
       justify-content: space-between;
 
-      @media (max-width:1110px) {
+      @media (max-width: 1110px) {
          flex-wrap: wrap;
       }
    }
