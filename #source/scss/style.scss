@@ -456,11 +456,19 @@ body {
    &__name {
       flex-basis: 285px;
       padding-right: 25px;
+
+      @media (max-width:$md2+px) {
+         flex-basis: 50%;
+      }
    }
 
    // .characteristics__descr
    &__descr {
       flex-basis: 285px;
+
+      @media (max-width:$md2+px) {
+         flex-basis: 50%;
+      }
    }
 
    // .characteristics__img
@@ -491,7 +499,23 @@ body {
          left: 0;
       }
    }
+
+   // .slider__item
+   &__item {}
+
+   // .slider__img
+   &__img {
+      object-fit: cover;
+      @media (max-width:$md2+px){
+         height: 400px;
+      }
+      @media (max-width:$md3+px){
+          height: 250px; 
+      }
+   }
 }
+  
+// 49:30
 
 //========================================================================================================================================================
 .price {

@@ -158,13 +158,20 @@ a {
 .scrollup {
   width: 40px;
   height: 40px;
-  opacity: 0.3;
+  opacity: 0.2;
   position: fixed;
   bottom: 150px;
   right: 100px;
   display: none;
   text-indent: -9999px;
-  background: url("/img/icon_top.png") no-repeat; }
+  background: url("/img/icon_top.png") no-repeat;
+  z-index: 1000; }
+  @media (max-width: 1100px) {
+    .scrollup {
+      bottom: 120px;
+      right: 20px; } }
+  .scrollup:hover {
+    opacity: 0.5; }
 
 /*
 	Стиль иконки бургера
@@ -502,9 +509,17 @@ body {
     -ms-flex-preferred-size: 285px;
     flex-basis: 285px;
     padding-right: 25px; }
+    @media (max-width: 991.98px) {
+      .characteristics__name {
+        -ms-flex-preferred-size: 50%;
+        flex-basis: 50%; } }
   .characteristics__descr {
     -ms-flex-preferred-size: 285px;
     flex-basis: 285px; }
+    @media (max-width: 991.98px) {
+      .characteristics__descr {
+        -ms-flex-preferred-size: 50%;
+        flex-basis: 50%; } }
   .characteristics__img {
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
@@ -526,6 +541,15 @@ body {
     .slider__items .slick-dots {
       top: 0;
       left: 0; }
+  .slider__img {
+    -o-object-fit: cover;
+    object-fit: cover; }
+    @media (max-width: 991.98px) {
+      .slider__img {
+        height: 400px; } }
+    @media (max-width: 767.98px) {
+      .slider__img {
+        height: 250px; } }
 
 .price {
   margin-bottom: 100px; }
