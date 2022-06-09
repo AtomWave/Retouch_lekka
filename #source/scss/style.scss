@@ -320,7 +320,9 @@ body {
 
    @media (max-width: 1100px) {
       margin-bottom: 50px;
-
+   }
+   @media (max-width:$md4+px){
+       margin-bottom: 40px; 
    }
 
    // .info__inner
@@ -390,6 +392,9 @@ body {
 
    @media (max-width:$md3+px) {
       margin-bottom: 60px;
+   }
+   @media (max-width:$md4+px){
+       margin-bottom: 40px; 
    }
 
    // .characteristics__title
@@ -490,9 +495,29 @@ body {
 .slider {
    margin-bottom: 50px;
 
+   @media (max-width:$md3+px) {
+      margin-bottom: 30px;
+   }
+
+   @media (max-width:$md4+px) {
+      display: none;
+   }
+
    // .slider__items
    &__items {
       padding-left: 50px;
+
+      @media (max-width:$md2+px) {
+         padding-left: 30px;
+      }
+
+      @media (max-width:$md3+px) {
+         padding-left: 20px;
+      }
+
+      @media (max-width:$md4+px) {
+         padding-left: 10px;
+      }
 
       .slick-dots {
          top: 0;
@@ -505,21 +530,22 @@ body {
 
    // .slider__img
    &__img {
-      object-fit: cover;
-      @media (max-width:$md2+px){
-         height: 400px;
-      }
-      @media (max-width:$md3+px){
-          height: 250px; 
-      }
+      max-width: 100%;
    }
 }
-  
+
 // 49:30
 
 //========================================================================================================================================================
 .price {
    margin-bottom: 100px;
+
+   @media (max-width: 1100px) {
+      margin-bottom: 50px;
+   }
+   @media (max-width:$md4+px){
+       margin-bottom: 30px; 
+   }
 
    // .price__inner
    &__inner {
@@ -530,6 +556,10 @@ body {
 .form {
    max-width: 420px;
 
+   @media (max-width:$md4+px) {
+      margin: 0 auto;
+   }
+
    // .form__title
    &__title {
       margin-bottom: 40px;
@@ -537,12 +567,18 @@ body {
       font-size: 16px;
       line-height: 19px;
       text-transform: uppercase;
+      @media (max-width:$md4+px){
+          margin-bottom: 15px; 
+      }
    }
 
    // .form__text
    &__text {
       max-width: 300px;
       margin-bottom: 30px;
+      @media (max-width:$md4+px){
+          margin-bottom: 15px; 
+      }
    }
 
    // .form__input-text
@@ -570,7 +606,15 @@ body {
    // .form__label-box
    &__label-box {
       display: flex;
-      margin-bottom: 50px;
+      margin-bottom: 60px;
+
+      @media (max-width:$md2+px) {
+         margin-bottom: 300px;
+      }
+
+      @media (max-width:$md4+px) {
+         margin-bottom: 290px;
+      }
    }
 
    // .form__label + .form__label
@@ -603,10 +647,37 @@ body {
       position: absolute;
       right: 0;
       top: 0;
+
+      @media (max-width: 1140px) {
+         top: 45px;
+      }
+
+      @media (max-width:$md2+px) {
+         top: auto;
+         bottom: 90px;
+         left: 0;
+         right: auto;
+      }
+
+      @media (max-width:$md4+px) {
+         bottom: 50px;
+      }
    }
 
    // .form__bike-img
-   &__bike-img {}
+   &__bike-img {
+      @media (max-width: 1140px) {
+         width: 500px;
+      }
+
+      @media (max-width:$md2+px) {
+         width: 430px;
+      }
+
+      @media (max-width:$md4+px) {
+         width: 100%;
+      }
+   }
 
    // .form__bike-price
    &__bike-price {
@@ -624,6 +695,42 @@ body {
       border-radius: 50%;
       transform: translateX(-50%);
 
+      @media (max-width: 1140px) {
+         font-size: 28px;
+         top: 18px;
+         left: 12px;
+         right: 0;
+         width: 190px;
+         height: 85px;
+      }
+
+      @media (max-width:$md2+px) {
+         top: 46px;
+         left: 97px;
+         right: 0;
+         background-color: white;
+         transform: translateX(100%);
+      }
+
+      @media (max-width: 500px) {
+         top: 35px;
+         left: 0;
+         right: auto;
+         transform: translateX(0);
+         background-color: inherit;
+         font-size: 18px;
+         display: inline-block;
+         border: none;
+         border-radius: 0;
+
+         span {
+            background-color: #131313;
+            color: #fff;
+            display: inline-block;
+            padding: 3px;
+         }
+      }
+
       &::after {
          content: '';
          width: 221px;
@@ -633,6 +740,16 @@ body {
          position: absolute;
          top: 12px;
          left: 0;
+
+         @media (max-width: 1140px) {
+            top: 10px;
+            width: 190px;
+            height: 85px;
+         }
+
+         @media (max-width: 500px) {
+            border: none;
+         }
       }
    }
 
@@ -661,7 +778,13 @@ body {
    }
 
    // .form__btn
-   &__btn {}
+   &__btn {
+      @media (max-width:$md4+px) {
+         display: flex;
+         margin: 0 auto;
+         padding: 13px 4px 13px 20px;
+      }
+   }
 }
 
 
