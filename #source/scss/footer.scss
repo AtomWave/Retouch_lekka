@@ -19,6 +19,10 @@
          padding: 15px 0px;
          height: auto;
          text-align: center;
+         // margin-left: 30%;
+         // padding-bottom: 15px;
+         // padding-top: 15px;
+         // width: 100%;
       }
    }
 
@@ -52,7 +56,7 @@
 
    // .footer__social-link
    &__social-link+&__social-link {
-      margin-left: 26px;
+      margin-left: 28px;
    }
 
    // .footer__social-img
@@ -66,7 +70,8 @@
       color: #FFFFFF;
       @media (max-width: 450px){
          display: flex;
-         flex-direction: column;  
+         flex-direction: column; 
+        align-items: center;
       }
    }
 
@@ -74,11 +79,17 @@
    &__contacts-link {
       display: flex;
       align-items: center;
+      @media (max-width: 450px){
+         margin-left: -42px;   
+      }
    }
 
    // .footer__contacts-link + .footer__contacts-link
    &__contacts-link+&__contacts-link {
       margin-top: 10px;
+      @media (max-width: 450px){
+         padding-left: 42px;   
+      } 
    }
 
    // .footer__contacts-img
