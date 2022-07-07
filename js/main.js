@@ -1,6 +1,5 @@
 //@prepros-append jq-start.js
-//@prepros-append vendors.js
-//@prepros-append custom.js
+//@prepros-append ../3Dscroll/3Dscroll.js
 //@prepros-append jq-end.js
 $(function() {
 		var w=$(window).outerWidth();
@@ -21,51 +20,52 @@ $(function() {
 	}
 
    
+// 3D Scroll
 
-   $('.bike-slider').slick({
-      arrows: false,
-      dots: true,
-      fade: true,
-      autoplay: true,
-      autoplaySpeed: 2000,
-   });
+let zSpacing = -1000,
+		lastPos = zSpacing / 5,
+		$frames = document.getElementsByClassName('frame'),
+		frames = Array.from($frames),
+		zVals = []
 
-   $('.slider__items').slick({
-      arrows: false,
-      dots: true,
-      fade: false,
-      autoplay: true,
-      autoplaySpeed: 2000,
-   });
+		window.onscroll = function() {
 
-   $(".menu, .bike__column, .bike__link").on("click","a", function (event) {
-		//отменяем стандартную обработку нажатия по ссылке
-		event.preventDefault();
-
-		//забираем идентификатор бока с атрибута href
-		var id  = $(this).attr('href'),
-
-		//узнаем высоту от начала страницы до блока на который ссылается якорь
-			top = $(id).offset().top;
+			let top = document.documentElement.scrollTop,
+					delta = lastPos - top
 		
-		//анимируем переход на расстояние - top за 1500 мс
-		$('body,html').animate({scrollTop: top}, 1000);
-	});
+			lastPos = top
+		
+			frames.forEach(function(n, i) {
+				zVals.push((i * zSpacing) + zSpacing)
+				zVals[i] += delta * -5.5
+				let frame = frames[i],
+						transform = `translateZ(${zVals[i]}px)`,
+						// без opacity - убрать запятую перед frame и закомментить следующие две строки, или убрать ( ; opacity: ${opacity} )
+						// frame.setAttribute('style', `transform: ${transform}`) 
+						opacity = zVals[i] < Math.abs(zSpacing) / 1.8 ? 1 : 0
+				frame.setAttribute('style', `transform: ${transform}; opacity: ${opacity}`)
+				
+			})
+		
+		}
 
-   // Плавающая кнопка 
-   $(window).scroll(function(){
-      if ($(this).scrollTop() > 100) {
-      $('.scrollup').fadeIn();
-      } else {
-      $('.scrollup').fadeOut();
-      }
-      });
-       
-      $('.scrollup').click(function(){
-      $("html, body").animate({ scrollTop: 0 }, 600);
-      return false;
-      });
+		window.scrollTo(0, 1)
 
-   // 
+		// Audio
 
+let soundButton = document.querySelector('.soundbutton'),
+audio = document.querySelector('.audio')
+
+soundButton.addEventListener('click', e => {
+	soundButton.classList.toggle('paused')
+	audio.paused ? audio.play() : audio.pause()
+})
+
+window.onfocus = function() {
+	soundButton.classList.contains('paused') ? audio.pause() : audio.play()
+}
+
+window.onblur = function() {
+	audio.pause()
+}
 });
