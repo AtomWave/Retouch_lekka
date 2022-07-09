@@ -149,7 +149,7 @@ body {
 ; }
 
 body {
-  background-color: #fff;
+  background-color: #f2e1cb;
   color: rgba(0, 0, 0, 0.87);
   font-size: calc(var(--index) * .8);
   line-height: 1.75;
@@ -187,8 +187,6 @@ body {
   will-change: transform;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d; }
-  .frame__content-title {
-    background-color: #fff; }
   .frame__content-copyright {
     font-size: calc(var(--index) * 2.5); }
   .frame h2 {
@@ -218,14 +216,38 @@ h4 {
   background-position: center;
   background-size: cover; }
 
+.frame-media-title {
+  width: calc(var(--index) * 2 * var(--side-big));
+  height: calc(var(--index) /2 * var(--side-big));
+  position: relative;
+  top: 0;
+  -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); }
+
 .frame-media-left {
   right: calc(var(--side-small) / 2 * var(--index) + var(--gutter)); }
+  .frame-media-left img {
+    position: absolute;
+    top: 40%;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); }
 
 .frame-media-right {
   left: calc(var(--side-small) / 2 * var(--index) + var(--gutter)); }
+  .frame-media-right img {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 50%;
+    height: 50%;
+    -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); }
 
 .frame-bg {
-  background-color: #fff; }
+  background-color: #f2e1cb; }
 
 video.frame-media {
   width: calc(var(--index) * var(--side-big));
@@ -244,6 +266,24 @@ video.frame-media-left {
 .text-left > * {
   position: relative;
   right: 18vw; }
+
+.text-bottom {
+  position: absolute;
+  bottom: 24vh;
+  background-color: #f2e1cb; }
+  .text-bottom h1,
+  .text-bottom h2,
+  .text-bottom h3,
+  .text-bottom h4 {
+    font-weight: 300;
+    text-transform: inherit;
+    width: 100%;
+    line-height: 1; }
+  .text-bottom h2 {
+    font-size: calc(var(--index) * 1.3); }
+  .text-bottom p {
+    max-width: 100vw;
+    margin-top: 0; }
 
 .soundbutton {
   position: fixed;
