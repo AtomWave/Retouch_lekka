@@ -221,7 +221,7 @@ body {
 
 	// .frame__content-copyright
 	&__content-copyright {
-		font-size: calc(var(--index) * 2.5);
+		font-size: calc(var(--index) * 1);
 	}
 
 	h2 {
@@ -264,10 +264,12 @@ h4 {
 	background-position: center;
 	background-size: cover;
 
+
 	img {
 		position: absolute;
 		box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 		border-radius: 5px;
+
 	}
 
 }
@@ -280,31 +282,87 @@ h4 {
 	border-radius: 10px;
 }
 
-.frame-media-left {
-	right: calc(var(--side-small) / 2 * var(--index) + var(--gutter));
-	box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-	border-radius: 10px;
+.frame-media-center {
+	width: calc(var(--index) * var(--side-big));
+	height: calc(var(--index) * var(--side-small));
 
 	img {
-		top: 40%;
-		right: 0;
+		top: 5%;
+		// right: 5%;
+		left: 10%;
 		width: 50%;
 		height: 50%;
+		box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+		border-radius: 10px;
+	}
+}
+
+.frame-media-left {
+	right: calc(var(--side-small) / 2 * var(--index) + var(--gutter));
+
+	img {
+		// top: 5%;
+		// left: 10%;
+		// width: 90%;
+		// height: 90%;
+		// box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+		// border-radius: 10px;
 	}
 }
 
 .frame-media-right {
 	left: calc(var(--side-small) / 2 * var(--index) + var(--gutter));
-	box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 
+	// box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 	img {
-		top: 40%;
-		left: 0;
-		width: 50%;
-		height: 50%;
+		top: 5%;
+		// left: 5%;
+		right: 10%;
+		width: 90%;
+		height: 90%;
+		box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+		border-radius: 10px;
 	}
 }
 
+.gallery-1 {
+	top: 5%;
+	left: 10%;
+	width: 90%;
+	height: 90%;
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
+}
+
+.gallery-2 {
+	top: 0;
+	// right: 5%;
+	left: 0;
+	width: calc(var(--index) / 1.5 * var(--side-big));
+	height: calc(var(--index) / 1.5 * var(--side-small));
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
+}
+
+.gallery-3 {
+	top: 0;
+	// right: 5%;
+	left: 0;
+	width: calc(var(--index) / 1.5 * var(--side-big));
+	height: calc(var(--index) / 1.5 * var(--side-small));
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
+}
+
+.gallery-4 {
+	top: 0;
+	// right: 5%;
+	left: 0;
+	width: calc(var(--index) / 1.5 * var(--side-big));
+	height: calc(var(--index) / 1.5 * var(--side-small));
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
+}
 
 
 .frame-bg {
@@ -375,5 +433,25 @@ video.frame-media-left {
 
 	&.paused {
 		opacity: .40;
+	}
+}
+
+//========================== Плавающая кнопка =======================================================
+.scrollup {
+	// width: 40px;
+	height: 40px;
+	opacity: 0.6;
+	position: fixed;
+	bottom: 3vh;
+	left: 5vw;
+	display: none;
+	color: rgba(0, 0, 0, 0.87);
+	// text-indent: -9999px;
+	background: url('/img/icon_top.png') no-repeat;
+	z-index: 1000;
+	width: auto;
+
+	&:hover {
+		opacity: 1;
 	}
 }
