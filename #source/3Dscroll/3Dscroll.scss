@@ -4,8 +4,9 @@
 	--gutter: 15px;
 	--side-small: 26;
 	--side-big: 36;
-	// высота по оси Z
-	--depth: 4000px;
+	// высота по оси Z !!!!
+	--depth: 5500px;
+	//===================================================================================================
 	--transition: .75s cubic-bezier(.075, .5, 0, 1)
 }
 
@@ -179,17 +180,17 @@ body {
 	backface-visibility: hidden;
 	transform: rotateX(-180deg);
 	color: white;
-   overflow: hidden;
-   
+	overflow: hidden;
+
 }
 
 
 .inner {
 	padding: 20px;
-	line-height: 1.4;
+	line-height: 1.7;
 	letter-spacing: 1px;
-   overflow: auto;
-   height: 100%;
+	overflow: auto;
+	height: 100%;
 
 	span {
 		&:hover {
@@ -203,8 +204,8 @@ body {
 
 	p {
 		font-size: 16px;
-      display: block;
-      padding-bottom: 60px;
+		display: block;
+		padding-bottom: 60px;
 	}
 }
 
@@ -437,7 +438,7 @@ video.frame-media-left {
 // Все непосредственные потомки ( >* )
 .text-right>* {
 	position: relative;
-	left: 18vw;
+	left: 17vw;
 	top: 0vh;
 }
 

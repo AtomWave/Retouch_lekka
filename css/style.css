@@ -144,7 +144,7 @@ body {
   --gutter: 15px;
   --side-small: 26;
   --side-big: 36;
-  --depth: 4000px;
+  --depth: 5500px;
   --transition: .75s cubic-bezier(.075, .5, 0, 1)
 ; }
 
@@ -296,7 +296,7 @@ body {
 
 .inner {
   padding: 20px;
-  line-height: 1.4;
+  line-height: 1.7;
   letter-spacing: 1px;
   overflow: auto;
   height: 100%; }
@@ -489,7 +489,7 @@ video.frame-media-left {
 
 .text-right > * {
   position: relative;
-  left: 18vw;
+  left: 17vw;
   top: 0vh; }
 
 .text-left > * {
