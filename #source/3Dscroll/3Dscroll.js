@@ -1,7 +1,7 @@
 // 3D Scroll
 
 // zSpacing - расстояние между слоями
-let zSpacing = -1000,
+let zSpacing = -800,
 		lastPos = zSpacing / 5,
 		$frames = document.getElementsByClassName('frame'),
 		frames = Array.from($frames),
@@ -62,3 +62,5 @@ $(window).scroll(function(){
 	return false;
 	});
 
+	// 
+	
