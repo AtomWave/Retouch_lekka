@@ -187,9 +187,6 @@ body {
   will-change: transform;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d; }
-  @media (max-width: 641px) {
-    .frame__content {
-      top: 20vh; } }
   .frame__content-copyright {
     font-size: calc(var(--index) * 1); }
   .frame h2 {
@@ -201,14 +198,16 @@ body {
     font-size: calc(var(--index) * 2); }
     @media (max-width: 640px) {
       .frame h4 {
-        width: 60%;
+        font-size: calc(var(--index) * 3);
+        width: 70%;
         margin: 0px auto; } }
   .frame p {
     max-width: 30vw;
     margin-top: 3vh; }
     @media (max-width: 640px) {
       .frame p {
-        max-width: 60%;
+        font-size: calc(var(--index) * 1.5);
+        max-width: 70%;
         margin: 20px auto; } }
 
 h1,
@@ -263,6 +262,9 @@ h4 {
 
 .frame-media-left {
   right: calc(var(--side-small) / 2 * var(--index) + var(--gutter)); }
+  @media (max-width: 641px) {
+    .frame-media-left {
+      right: 0; } }
 
 .frame-media-right {
   left: calc(var(--side-small) / 2 * var(--index) + var(--gutter)); }
@@ -322,63 +324,106 @@ h4 {
       height: 50%; } }
 
 .gallery-2-1 {
-  top: 100vh;
-  right: 3vh;
+  top: 15%;
+  left: 33%;
   width: 70%;
   height: 70%;
   -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
   border-radius: 10px; }
+  @media (max-width: 767.98px) {
+    .gallery-2-1 {
+      width: 60%;
+      height: 60%;
+      left: 40%; } }
 
 .gallery-2-2 {
-  top: 28vh;
-  right: 100vh;
+  top: 165%;
+  right: 65%;
   width: 60%;
   height: 60%;
   -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
   border-radius: 10px; }
+  @media (max-width: 991.98px) {
+    .gallery-2-2 {
+      top: 160%;
+      right: 65%; } }
+  @media (max-width: 767.98px) {
+    .gallery-2-2 {
+      width: 50%;
+      height: 50%; } }
 
 .gallery-2-3 {
-  top: -50vh;
-  right: 0vh;
+  bottom: 140%;
+  left: 65%;
   width: 60%;
   height: 60%;
   -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
   border-radius: 10px; }
+  @media (max-width: 991.98px) {
+    .gallery-2-3 {
+      bottom: 140%;
+      left: 65%; } }
+  @media (max-width: 767.98px) {
+    .gallery-2-3 {
+      width: 50%;
+      height: 50%;
+      bottom: 150%; } }
 
 .gallery-3-1 {
-  top: 90vh;
-  right: -80vh;
+  top: 10%;
+  left: 35%;
   width: 70%;
   height: 70%;
   -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
   border-radius: 10px; }
+  @media (max-width: 767.98px) {
+    .gallery-3-1 {
+      width: 60%;
+      height: 60%;
+      left: 40%; } }
 
 .gallery-3-2 {
-  top: -45vh;
-  right: 70vh;
+  bottom: 140%;
+  right: 70%;
   width: 60%;
   height: 60%;
   -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
   border-radius: 10px; }
+  @media (max-width: 767.98px) {
+    .gallery-3-2 {
+      width: 50%;
+      height: 50%;
+      bottom: 150%;
+      right: 65%; } }
 
 .gallery-3-3 {
-  top: -80vh;
-  right: 20vh;
+  top: 120%;
+  left: 70%;
   width: 60%;
   height: 60%;
   -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
   border-radius: 10px; }
+  @media (max-width: 767.98px) {
+    .gallery-3-3 {
+      width: 50%;
+      height: 50%; } }
 
 .frame-bg {
   background-color: #f2e1cb;
   height: 200%;
   top: -45vh; }
+
+@media (max-width: 641px) {
+  .frame-640 {
+    background-color: #f2e1cb;
+    height: 200%;
+    top: -45vh; } }
 
 video.frame-media {
   width: calc(var(--index) * var(--side-big));
@@ -394,9 +439,8 @@ video.frame-media-left {
   position: relative;
   left: 17vw;
   top: 0vh; }
-  @media (max-width: 640px) {
+  @media (max-width: 641px) {
     .text-right > * {
-      bottom: 50vh;
       left: 0; } }
 
 .text-left > * {
@@ -602,7 +646,7 @@ video.frame-media-left {
   overflow: hidden; }
 
 .inner {
-  padding: 10px;
+  padding: 10px 10px 50px 10px;
   line-height: 1.7;
   letter-spacing: 1px;
   overflow: auto;
@@ -618,10 +662,6 @@ video.frame-media-left {
     min-width: 100%;
     margin-top: 3vh;
     padding: 0px 20px; }
-    @media (max-width: 991.98px) {
-      .inner p {
-        padding: 0px 10px; } }
     @media (max-width: 767.98px) {
       .inner p {
-        font-size: 14px;
-        padding: 0px 10px 50px 10px; } }
+        font-size: 14px; } }
