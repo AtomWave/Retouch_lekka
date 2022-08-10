@@ -646,22 +646,24 @@ video.frame-media-left {
   overflow: hidden; }
 
 .inner {
-  padding: 10px 10px 50px 10px;
   line-height: 1.7;
   letter-spacing: 1px;
-  overflow: auto;
   height: 100%; }
-  .inner span:hover {
-    text-decoration: underline; }
-  .inner a {
-    color: inherit; }
-  .inner p {
-    font-size: 16px;
-    display: block;
-    padding-bottom: 60px;
-    min-width: 100%;
-    margin-top: 3vh;
-    padding: 0px 20px; }
-    @media (max-width: 767.98px) {
-      .inner p {
-        font-size: 14px; } }
+  .inner h4 {
+    padding-left: 10px; }
+  .inner__text {
+    overflow: auto;
+    height: 100%; }
+    .inner__text span:hover {
+      text-decoration: underline; }
+    .inner__text a {
+      color: inherit; }
+    .inner__text p {
+      font-size: 16px;
+      display: block;
+      padding: 0px 0px 100px 10px;
+      min-width: 100%;
+      margin-top: 3vh; }
+      @media (max-width: 767.98px) {
+        .inner__text p {
+          font-size: 14px; } }

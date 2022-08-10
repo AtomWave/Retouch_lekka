@@ -639,32 +639,42 @@ video.frame-media-left {
 
 
 .inner {
-	padding: 10px 10px 50px 10px;
+	// padding: 10px;
 	line-height: 1.7;
 	letter-spacing: 1px;
-	overflow: auto;
+	// overflow: auto;
 	height: 100%;
 
-	span {
-		&:hover {
-			text-decoration: underline;
+	h4 {
+		padding-left: 10px;
+	}
+
+	// .inner__text
+	&__text {
+		overflow: auto;
+		height: 100%;
+
+		span {
+			&:hover {
+				text-decoration: underline;
+			}
 		}
-	}
 
-	a {
-		color: inherit;
-	}
+		a {
+			color: inherit;
+		}
 
-	p {
-		font-size: 16px;
-		display: block;
-		padding-bottom: 60px;
-		min-width: 100%;
-		margin-top: 3vh;
-		padding: 0px 20px;
+		p {
+			font-size: 16px;
+			display: block;
+			padding: 0px 0px 100px 10px;
+			min-width: 100%;
+			margin-top: 3vh;
+			// overflow: auto;
 
-		@media (max-width:$md3+px) {
-			font-size: 14px;
+			@media (max-width:$md3+px) {
+				font-size: 14px;
+			}
 		}
 	}
 }
