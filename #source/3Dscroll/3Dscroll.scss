@@ -668,9 +668,9 @@ video.frame-media-left {
 		p {
 			font-size: 16px;
 			display: block;
-			padding: 0px 0px 100px 10px;
+			padding: 0px 10px 100px 10px;
 			min-width: 100%;
-			margin-top: 3vh;
+			margin-top: 0;
 			// overflow: auto;
 
 			@media (max-width:$md3+px) {

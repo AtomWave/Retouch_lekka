@@ -650,7 +650,8 @@ video.frame-media-left {
   letter-spacing: 1px;
   height: 100%; }
   .inner h4 {
-    padding-left: 10px; }
+    padding-left: 10px;
+    margin-bottom: 10px; }
   .inner__text {
     overflow: auto;
     height: 100%; }
@@ -661,9 +662,9 @@ video.frame-media-left {
     .inner__text p {
       font-size: 16px;
       display: block;
-      padding: 0px 0px 100px 10px;
+      padding: 0px 10px 100px 10px;
       min-width: 100%;
-      margin-top: 3vh; }
+      margin-top: 0; }
       @media (max-width: 767.98px) {
         .inner__text p {
           font-size: 14px; } }
